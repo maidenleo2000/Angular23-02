@@ -17,15 +17,28 @@ export class ListComponent {
     }
   ]
 
-@Output()
-  public onDeleteId: EventEmitter<number> = new EventEmitter();
+// @Output()
+//   public onDeleteId: EventEmitter<number> = new EventEmitter();
 
 
-  onDeleteCharacter(index:number):void{
-    //TODO Emitir ID del personaje
+//   onDeleteCharacter(index:number):void{
+//     //TODO Emitir ID del personaje
 
-    console.log(index)
+//     console.log(index)
 
-    this.onDeleteId.emit(index)
+//     this.onDeleteId.emit(index)
+//   }
+
+
+//?Se genera ahora de esta forma para hacer funcionar la eliminacion por ID y no por index
+  @Output()
+  public onDeleteId: EventEmitter<string> = new EventEmitter();
+
+
+  onDeleteCharacter(id:string):void{
+
+    //console.log(id)
+
+    this.onDeleteId.emit(id)
   }
 }

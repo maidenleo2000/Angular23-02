@@ -7,7 +7,7 @@
     <!-- <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></dbz-list> -->
 
     <!-- Ahora lo copiamos asi porque creamos el service y movimos la data de lugar -->
-    <dbz-list [characterList]="dbzService.characters" (onDeleteId)="dbzService.onDeleteCharacter($event)"></dbz-list>
+    <dbz-list [characterList]="dbzService.characters" (onDeleteId)="dbzService.deleteCharacterById($event)"></dbz-list>
 
 
 
