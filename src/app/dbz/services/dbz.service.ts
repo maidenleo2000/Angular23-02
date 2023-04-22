@@ -23,7 +23,7 @@ export class DbzService {
     }
   ];
 
-  oneNewCharacterRecibido(character: Character):void {
+  addCharacter(character: Character):void {
     // console.log('Main Page');
     // console.log(character);
     const newCharacter: Character = {
