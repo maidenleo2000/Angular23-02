@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //?2 - Van las importaciones de modulos externos
 import { CounterModule } from './counter/counter.module';
+import { DbzModule } from './dbz/dbz.module';
 import { HeroesModule } from './heroes/heroes.module';
 
 //?3- Por ultimo nuestro codigo
@@ -17,7 +18,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CounterModule,
+    DbzModule,
     HeroesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

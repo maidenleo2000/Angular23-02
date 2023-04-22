@@ -1,0 +1,17 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!--USANDO INPUT. Este es el PADRE: En el TAG de dbz-list (el tag del HIJO) se le agrega un corchete con la propiedad DEL HIJO (characterList) y se iguala al valor del PADRE (characters) -->
+    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)"></dbz-list>
+
+
+  </div>
+
+  <div class="col">
+    <!-- USANDO OUTPUT. Este es el componente que RECIBE el evento, el que lo escucha y toma. Para esto vamos a tener que escuchar el evento con (), entonces escuchamos al evento creado con OUTPUT en el componente character.component.ts que se llama onNewCharacter y cuando emita vamos a disparar el metodo oneNewCharacterRecibido y le va a pasar el evento entre paréntesis () que se especifica SIEMPRE como $event. El método lo recibe y trabaja -->
+    <dbz-add-character (onNewCharacter)="oneNewCharacterRecibido($event)"></dbz-add-character>
+
+  </div>
+</div>
